@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		// Array Initialize
+		var arrInt = [5, 8, 1, 4, 9, 3, 7, 2, 6];
+		////Array Sort
+		//fnSortAsc(arrInt);
+		//alert(arrInt);
+		////FunctionSort
+		//function fnSortAsc(arrayObject) {
+		//	var tmp, i, j;
+		//	for (i = 0; i < arrayObject.length - 1; i++) {
+		//		for (j = arrayObject.length - 1; j > i; j--) {
+		//			if (arrayObject[j] < arrayObject[j - 1]) {
+		//				tmp = arrayObject[j];
+		//				arrayObject[j] = arrayObject[j - 1];
+		//				arrayObject[j - 1] = tmp;
+		//			}
+		//		}
+		//	}
+		//}
+
+		//----------------------------------------------------
+		////Array Average Caculate
+		//var average = fnAverage(arrInt);
+		//alert(average);
+		////Function Average
+		//function fnAverage(arrayObject) {
+		//	var sum = 0;
+		//	for (var i = 0; i < arrayObject.length; i++) {
+		//		sum += arrayObject[i];
+		//	}
+		//	return sum  / arrayObject.length; 
+		//}
+
+		//--------------------------------------------------
+		////Array Max
+		//var max = fnMax(arrInt);
+		//alert(max);
+		////Function Max
+		//function fnMax(arrayObject) {
+		//	var max = arrayObject[0], i = 1;
+		//	for (; i < arrayObject.length; i++) {
+		//		if (arrayObject[i] > max) {
+		//			max = arrayObject[i];
+		//		}
+		//	}
+		//	return max;
+		//}
+
+		//---------------------------------------------------
+		
+		var arrstr = ['John', 'Tom', 'Jack'];
+		////Array Join
+		//var result = fnJoin(arrstr,'|');
+		//alert(result);
+
+		////Function Join
+		//function fnJoin(arr, separator) {
+		//	var str = '', i;
+		//	//1
+		//	for (i = 0; i < arr.length-1; i++) {
+		//		str = str + arr[i] + separator;
+		//	}
+		//	str = str + arr[arr.length - 1];
+		//	return str;
+		//}
+
+		//----------------------------------------------------
+		//Array Reverse
+		//var result = fnReserve(arrstr);
+		//alert(result);
+
+		//function fnReserve(arrstr) {
+		//	var tmp;
+		//	for (var i = 0; i < arrstr.length; i++) {
+		//		tmp = arrstr[i];
+		//		arrstr[i] = arrstr[arrst.length - i - 1];
+		//		arrstr[arrst.length - i - 1] = tmp;
+		//	}
+		//}
+
+		//-----------------------------------------------------
+		//Array Sort Dsc
+		//arrInt.sort(function (x, y) { return y - x; });
+		//alert(arrInt); 
+
+		//-----------------------------------------------------
+		//Key Value Array
+		var dict = new Array();
+		dict['SA'] = 'SMA';
+		dict['SS'] = 'Samsung';
+		dict['TL'] = 'Tesla';
+		dict[0] = 'PV';
+		dict[1] = 'Storage';
+
+		var dict1 = { 'name': 'Jack', 'Age': 31 };
+
+
+		for (var key in dict1) {
+			alert('Key: ' + key + ' Value: ' + dict1[key]);
+		}
+		//output all dict
+	</script>
+</body>
+</html>

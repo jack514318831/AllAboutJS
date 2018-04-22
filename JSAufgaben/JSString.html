@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var msg = 'welcome to Germany, there are many, how many PV, how many Storage';
+		alert(msg.charAt(11));
+		alert(msg.indexOf('many', 16));
+		alert(msg.substr(4, 4));
+		var str = 'Lithium|Inon|Lead|PV|Storage';
+		alert(str.split('|', 3));
+		var d = new Date();
+		alert(d.getDate());
+		alert(d.getFullYear());
+		alert(d.getMonth());
+		alert(d.getDay());
+		alert(d.getHours());
+		alert(d.getMinutes());
+		alert(d.getSeconds());
+
+		//Caculate how many many
+		var index = 0, count = 0, keywords = 'many';
+		while ((index = msg.indexOf(keywords, index)) != -1) {
+			count++;
+			index = index + keywords.length;
+		}
+		alert(count);
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		////Create object
+		//function Person() {
+		//}
+		//var p = new Person();
+		//p.name = "Jack";
+		//p.age = 31;
+		//p.email = "aaa@aaa"
+		//p.sayHi = function () {
+		//	alert("Hallo");
+		//}
+
+		//-----------------------------------------------------------------
+		//Constructor
+		//function Person(name, age, email) {
+		//	this.username = name;
+		//	this.userage = age;
+		//	this.useremail = email;
+		//	this.sagHi = function () {
+		//	}
+		//}
+
+		//var p = new Person('jack', 31, "aaa");
+		//for (var key in p) {
+		//	alert(key + ' ' + p[key]);
+		//}
+
+		////Instanceof
+		//var result = p instanceof Person;
+		//alert(result);
+
+		////Create Object with JSon
+		//var p1 = {
+		//	name:"Gang",
+		//	age :21,
+		//	sayHi : function () { }
+		//};
+		//alert(p1.name);
+
+		////prototype
+		//Person.prototype.sayHello = function () { };
+
+		//-------------------------------------------------------------
+		//Inheriab
+		function Person(n) {
+			name = n;
+		}
+		Person.prototype.sayHi = function () { alert(this.name); };
+		var p = new Person('Jack');
+
+		function Student(sid) {
+			this.SID = sid;
+		}
+		Student.prototype = p;
+
+		var s = new Student();
+		s.name = 'Gang';
+		s.sayHi();
+
+		//---------------------------------------------------------------
+		////closure
+		//function fn1() {
+		//	var funs = new Array();
+		//	for (var i = 0; i < 10; i++) {
+		//		func[i] = function () {
+		//			alert(i)
+		//		};
+		//	}
+		//	return funs;
+		//}
+
+		//var myFuns = f1();
+
+		//for (var n = 0; n < myFuns.length; n++) {
+		//	myFuns[n]();
+		//}
+
+		//----------------------------------------------------------------
+		// this Meaning
+		var name = 'Gang';
+		function fn1() {
+			this.name = 'Jack';
+			this.getName = function () {
+				alert(this.name);
+				return function () { return this.name; };
+			};
+		}
+
+		var fn2 = new fn1();
+		alert(fn2.getName()());
+
+	</script>
+</body>
+</html>
